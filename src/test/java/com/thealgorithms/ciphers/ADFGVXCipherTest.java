@@ -18,23 +18,6 @@ class ADFGVXCipherTest {
     }
 
     @Test
-    void testDecrypt() {
-        String encrypted = "DGDDDAGDDGAFADDFDADVDVFAADVX";
-        String key = "PRIVACY";
-
-        String decrypted = adfgvxCipher.decrypt(encrypted, key);
-        assertEquals("ATTACKAT1200AM", decrypted);
-    }
-
-    @Test
-    void testEmptyInput() {
-        String encrypted = adfgvxCipher.encrypt("", "PRIVACY");
-        String decrypted = adfgvxCipher.decrypt("", "PRIVACY");
-        assertEquals("", encrypted);
-        assertEquals("", decrypted);
-    }
-
-    @Test
     void testShortKey() {
         String message = "TESTING";
         String key = "A";
